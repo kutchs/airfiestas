@@ -1,5 +1,24 @@
 Rails.application.routes.draw do
+  get 'reservations/new'
+  get 'reservations/update'
+  get 'myevents/index'
+  get 'events/index'
+  get 'events/show'
+  get 'events/new'
+  get 'events/edit'
+  get 'events/create'
+  get 'events/update'
+  get 'events/destroy'
+  devise_for :users
   root to: "pages#home"
+  resources :events do
+    resources :reservations, only: [:new, :create]
+  end
+
+  get "myevents", to: "myevents#index"
+  get "reservations", to: "reservations#index"
+  patch "reservations/:id/validate", to: "reservations#validate"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
