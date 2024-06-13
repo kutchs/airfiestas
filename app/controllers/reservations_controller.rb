@@ -4,4 +4,7 @@ class ReservationsController < ApplicationController
 
   def update
   end
+
+  def validate
+  end
 end
