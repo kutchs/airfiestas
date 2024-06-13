@@ -1,2 +1,19 @@
-<h1>Events#new / EVENTS</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1>Nouvel Événement</h1>
+
+<%= simple_form_for @event do |form| %>
+  <%= form.error_notification %>
+
+  <div class="form-inputs">
+    <%= form.input :name %>
+    <%= form.input :address %>
+    <%= form.input :description %>
+    <%= form.input :date_time, as: :datetime, class: "form-control form-control-lg", input_html: {value: params[:start_date]}, wrapper_html: { class: 'mb-3' }, html5: true %>
+    <%= form.input :open, as: :boolean, label: 'Ouvert', checked_value: true, unchecked_value: false, input_html: { checked: true } %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.button :submit, 'Créer Événement', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Retour', events_path, class: 'btn btn-secondary' %>
