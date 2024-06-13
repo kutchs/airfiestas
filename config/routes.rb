@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "myevents", to: "myevents#index"
   get "reservations", to: "reservations#index"
   patch "reservations/:id/validate", to: "reservations#validate"
+  get "reservations/:id/validate", to: "reservations#validate"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
