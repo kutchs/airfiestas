@@ -1,19 +1,23 @@
-<h1>Nouvel Événement</h1>
 
-<%= simple_form_for @event do |form| %>
-  <%= form.error_notification %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 mt-">
+      <h1>Add an event</h1>
+      <%= simple_form_for @event do |form| %>
+        <%= form.error_notification %>
+        <div class="form-inputs mt-4">
+          <%= form.input :name, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the name of your event' } %>
+          <%= form.input :address, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the adress of your event' } %>
+          <%= form.input :description, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter a description of your event' } %>
+          <%= form.input :date_time, as: :datetime, class: "form-control form-control-lg", input_html: {value: params[:start_date], class: 'field-bg-color field-no-border'}, wrapper_html: { class: 'mb-3' }, html5: true %>
+          <%= form.hidden_field :open, value: true %>
+        </div>
 
-  <div class="form-inputs">
-    <%= form.input :name %>
-    <%= form.input :address %>
-    <%= form.input :description %>
-    <%= form.input :date_time, as: :datetime, class: "form-control form-control-lg", input_html: {value: params[:start_date]}, wrapper_html: { class: 'mb-3' }, html5: true %>
-    <%= form.input :open, as: :boolean, label: 'Ouvert', checked_value: true, unchecked_value: false, input_html: { checked: true } %>
+        <div class="form-actions text-end">
+          <%= link_to 'Back', events_path, class: 'btn btn-secondary' %>
+          <%= form.button :submit, 'Add event', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= form.button :submit, 'Créer Événement', class: 'btn btn-primary' %>
-  </div>
-<% end %>
-
-<%= link_to 'Retour', events_path, class: 'btn btn-secondary' %>
+</div>
