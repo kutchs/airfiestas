@@ -1,0 +1,12 @@
+.field-bg-color {
+  background-color: #f8f8f8;
+}
+
+.field-bg-color::placeholder {
+  color: #b6b6b6;
+}
+
+.field-no-border {
+  border: none;
+  box-shadow: none;
+}
