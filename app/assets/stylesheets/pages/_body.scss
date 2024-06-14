@@ -1,3 +1,17 @@
 .background-white {
   background-color: #FFFFFF;
 }
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  color: $primary-color; // Utilisation de la couleur primaire
+  border-bottom: 3px solid $secondary-color; // utilisation de la couleur secondaire
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+}
