@@ -13,7 +13,11 @@
             <p class="card-text"><%= event.description %></p>
             <p class="card-text"><strong>Date et heure :</strong> <%= event.date_time ? event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
             <p class="card-text"><strong>Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
-            <p class="card-text"><strong>Utilisateur ID :</strong> <%= event.user_id %></p>
+            <% if event.user %>
+              <p class="card-text"><strong>Créateur de l'évènement :</strong> <%= event.user.name %> <%= event.user.firstname %></p>
+            <% else %>
+              <p class="card-text"><strong>Créateur de l'évènement :</strong> Non spécifié</p>
+            <% end %>
               <div>
                 <% if event.image.attached? %>
                   <%= cl_image_tag(event.image.key, width: 200, crop: :fill) %>
