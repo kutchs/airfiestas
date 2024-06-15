@@ -1,24 +1,109 @@
-<h1>Pages#home</h1>
+<%# <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <h1 class="my-4">Les 6 derniers évènements postés sur la plateforme</h1>
 
 <div class="container">
   <div class="row">
-    <% @events.each do |event| %>
-      <div class="col-md-4">
+    <%# <% @events.each do |event| %>
+      <%# <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-body">
             <h5 class="card-title"><%= event.name %></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%= event.address %></h6>
-            <p class="card-text"><%= event.description %></p>
-            <p class="card-text"><strong>Date et heure :</strong> <%= event.date_time ? event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
-            <p class="card-text"><strong>Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
-            <p class="card-text"><strong>Utilisateur ID :</strong> <%= event.user_id %></p>
-            <a href="<%= event_path(event) %>" class="btn btn-primary mt-3">Voir Détails</a>
-          </div>
+            <%# <h6 class="card-subtitle mb-2 text-muted"><%= event.address %></h6>
+            <%# <p class="card-text"><%= event.description %></p>
+            <%# <p class="card-text"><strong>Date et heure :</strong> <%= event.date_time ? event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
+            <%# <p class="card-text"><strong>Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
+            <%# <p class="card-text"><strong>Utilisateur ID :</strong> <%= event.user_id %></p>
+            <%# <a href="<%= event_path(event) class="btn btn-primary mt-3">Voir Détails</a> %>
+          <%# </div>
         </div>
       </div>
     <% end %>
-  </div>
-</div>
+  <%# </div>
+</div>  %>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirFiestas</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .event-details {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 8px;
+      }
+  </style>
+</head>
+<body>
+
+        <!-- Featured Location -->
+        <%# <div class="row mt-4">
+          <div class="col-12"> %>
+            <div class="card mt-4 mb-4" style="background-image: url('https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc='); background-size: cover; background-position: center; height:400px, display: flex;align-items: center; justify-content: center;">
+              <div class="container mt-4">
+                <div class="row mb-8">
+                  <%# search bar %>
+                  <div class="col-6">
+                    <input type="text" class="form-control search-button" placeholder="Trouvez vos meilleures soirées'">
+                  </div>
+                </div>
+
+                <%# #Name&Desc %>
+                <div class="card-body text-white col-6 mt-20" style="background: rgba(0, 0, 0, 0.5);"> <!-- Ajout d'un overlay pour améliorer la lisibilité du texte -->
+                  <h1 class="card-title"><strong>AirFiestas</strong></h1>
+                  <p class="card-text">Trouvez et réservez vos meilleures soirées en un clin d'oeil!</p>
+                  <a href="#" class="validation-button">Voir les offres</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destination Grid -->
+
+        <h1 class="my-4">Soirées à la une! </h1>
+        <div class="row text-center text-lg-left">
+          <% @events.each do |event| %>
+            <div class="col-lg-4 col-md-4 col-6 p-6">
+              <div class="img-top">
+                <a href="#" class="d-block mb-4">
+                  <img class="img-fluid img-thumbnail" src="https://media.istockphoto.com/id/1203977014/fr/photo/les-gens-c%C3%A9l%C3%A9brant-et-dansant-le-carnaval-br%C3%A9silien-au-carnaval-d%C3%A9cole.jpg?s=1024x1024&w=is&k=20&c=06UwYWeuTMc01UrNu-hPDjsgtpioo2Xbsx2wQIecyNs=" alt="Soirée 1">
+              </div>
+              <div class="event-details">
+                <h2><%= event.name %></h2>
+                <h3><%= event.date_time.strftime("%d/%m/%Y %H:%M") %></h3>
+                <p><strong> Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
+                <p><strong> Organisateur :</strong> <%= event.organizer_id %></p>
+              </div>
+            </div>
+          <% end %>
+
+            <div class="col-lg-4 col-md-4 col-6">
+                <a href="#" class="d-block mb-4">
+                    <img class="img-fluid img-thumbnail" src="https://media.istockphoto.com/id/1203977014/fr/photo/les-gens-c%C3%A9l%C3%A9brant-et-dansant-le-carnaval-br%C3%A9silien-au-carnaval-d%C3%A9cole.jpg?s=1024x1024&w=is&k=20&c=06UwYWeuTMc01UrNu-hPDjsgtpioo2Xbsx2wQIecyNs=" alt="Germany">
+                    <p>Soirée Carribéenne</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+                <a href="#" class="d-block mb-4">
+                    <img class="img-fluid img-thumbnail" src="https://media.istockphoto.com/id/1203977014/fr/photo/les-gens-c%C3%A9l%C3%A9brant-et-dansant-le-carnaval-br%C3%A9silien-au-carnaval-d%C3%A9cole.jpg?s=1024x1024&w=is&k=20&c=06UwYWeuTMc01UrNu-hPDjsgtpioo2Xbsx2wQIecyNs=" alt="France">
+                    <p>Soirée Rétro</p>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+                <a href="#" class="d-block mb-4">
+                    <img class="img-fluid img-thumbnail" src="https://media.istockphoto.com/id/1203977014/fr/photo/les-gens-c%C3%A9l%C3%A9brant-et-dansant-le-carnaval-br%C3%A9silien-au-carnaval-d%C3%A9cole.jpg?s=1024x1024&w=is&k=20&c=06UwYWeuTMc01UrNu-hPDjsgtpioo2Xbsx2wQIecyNs=" alt="Australia">
+                    <p>Soirée Pop</p>
+                </a>
+            </div>
+            <!-- Add more countries as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
