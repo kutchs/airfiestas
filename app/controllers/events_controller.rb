@@ -39,6 +39,12 @@ class EventsController < ApplicationController
     redirect_to events_path, notice: 'L\'événement a été supprimé avec succès.'
   end
 
+  def register
+    @event = Event.find(params[:id])
+    current_user.reservations.create(event: @event)
+    redirect_to @event, notice: "Vous êtes maintenant inscrit à cet événement."
+  end
+
   private
 
   def set_event
