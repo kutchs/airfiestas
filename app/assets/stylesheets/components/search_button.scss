@@ -1,0 +1,17 @@
+$search-button-color: rgb(48, 46, 46);
+$search-button-background: #F8F2E9;
+$search-button-hover-background: rgba(248,242,233,0.7);
+$search-button-padding: 8px 24px;
+$search-button-border-radius: 50%;
+
+.search-button {
+  color: $search-button-color;
+  padding: $search-button-padding;
+  border-radius: $search-button-border-radius;
+  background-color: $search-button-background;
+
+  &:hover {
+    background-color: $search-button-hover-background;
+    color: $search-button-color;
+  }
+}
