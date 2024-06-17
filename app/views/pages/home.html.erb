@@ -1,24 +1,33 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Banner -->
 
-<h1 class="my-4">Les 6 derniers évènements postés sur la plateforme</h1>
-
-<div class="container">
-  <div class="row">
-    <% @events.each do |event| %>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title"><%= event.name %></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%= event.address %></h6>
-            <p class="card-text"><%= event.description %></p>
-            <p class="card-text"><strong>Date et heure :</strong> <%= event.date_time ? event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
-            <p class="card-text"><strong>Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
-            <p class="card-text"><strong>Utilisateur ID :</strong> <%= event.user_id %></p>
-            <a href="<%= event_path(event) %>" class="btn btn-primary mt-3">Voir Détails</a>
-          </div>
-        </div>
+<div class="banner mt-4 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1675704915596-c3e1ac9736c5?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container">
+   <div class="row align-items-start justify-content-center">
+      <div class="mb-8 col-8">
+        <input type="text" class="form-control search-button" placeholder="Saisir une ville et trouvez vos meilleures soirées">
       </div>
-    <% end %>
+    </div>
+    <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+      <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
+        <h1 class="mb-4"><strong>Air Fiestas</strong></h1>
+        <p class="mb-4">Trouvez et réservez vos meilleures soirées en un clin d'oeil!</p>
+        <%= link_to 'Voir les offres', events_index_path, class: 'button' %>
+      </div>
+    </div>
   </div>
 </div>
+
+ <!-- Fiestas Grid -->
+
+<div class="container">
+  <h1 class="my-4">Soirées à la une!</h1>
+  <%= render 'card_fiesta' %>
+</div>
+
+
+<!-- Fiestas Footer in the layout -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

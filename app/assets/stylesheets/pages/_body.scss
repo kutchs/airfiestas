@@ -14,6 +14,7 @@ h3 {
   font-size: 32px;
 }
 .h1-line {
-  color: $primary-color; // Utilisation de la couleur primaire
+  color: $secondary-color; // Utilisation de la couleur primaire
   border-bottom: 3px solid $secondary-color; // utilisation de la couleur secondaire
+  font-weight:bolder
 }
