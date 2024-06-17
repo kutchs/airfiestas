@@ -3,8 +3,8 @@ $third-color: #040404;
 $footer-height: 100px;
 $footer-padding: 0px 50px;
 $footer-color: rgba(0, 0, 0, 0.3);
-$link-color: black;
-$link-opacity: 0.15;
+$link-color: $fourth-color;
+$link-opacity: 0.6;
 $link-hover-opacity: 1;
 $link-font-size: 24px;
 $link-padding: 0px 10px;
@@ -12,7 +12,7 @@ $heart-color: #D23333;
 
 // SCSS Code
 .footer {
-  background: $footer-background;
+  background: $third-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,5 +39,9 @@ $heart-color: #D23333;
 
   .fa-heart {
     color: $heart-color;
+  }
+
+  .footer-copyright {
+    color: $primary-color;
   }
 }

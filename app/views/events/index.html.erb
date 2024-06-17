@@ -1,23 +1,24 @@
 <%# Affichage des events %>
 
+<html>
 
-<div class="container">
-  <h1 class="h1-line my-4">Liste des événements</h1>
-  <div class="row">
-    <% @events.each do |event| %>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title"><%= event.name %></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%= event.address %></h6>
-            <p class="card-text"><%= event.description %></p>
-            <p class="card-text"><strong>Date et heure :</strong> <%= event.date_time ? event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
-            <p class="card-text"><strong>Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></p>
-            <p class="card-text"><strong>Utilisateur ID :</strong> <%= event.user_id %></p>
-            <a href="<%= event_path(event) %>" class="btn btn-primary mt-3">Voir Détails</a>
-          </div>
-        </div>
+
+<body>
+
+<div class="index-top-card mt-4 p-4 mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc=);">
+  <div class="container">
+    <div class="row justify-content-center align-items-start" style="min-height: 70vh;">
+      <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
+        <h1 class="mb-4"><strong>Tous nos Events</strong></h1>
+        <p class="mb-4">Vous trouverez certainement votre bonheur...</p>
       </div>
-    <% end %>
+    </div>
   </div>
+</div>
+
+
+
+<!-- Fiestas Grid -->
+<div class="container">
+  <%= render 'card_fiesta' %>
 </div>

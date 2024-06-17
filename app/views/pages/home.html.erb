@@ -1,106 +1,37 @@
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AirFiestas</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-</head>
 
 <body>
 
-<div class="banner mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1675704915596-c3e1ac9736c5?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+<!-- Banner -->
+
+<div class="banner mt-4 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1675704915596-c3e1ac9736c5?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
   <div class="container">
-    <div class="mb-8">
-      <input type="text" class="form-control search-button" placeholder="Trouvez vos meilleures soirées'">
+   <div class="row align-items-start justify-content-center">
+      <div class="mb-8 col-8">
+        <input type="text" class="form-control search-button" placeholder="Saisir une ville et trouvez vos meilleures soirées">
+      </div>
     </div>
-    <div class="mt-8" style="background: rgba(0, 0, 0, 0.5)">
-      <h1><strong>Air Fiestas</strong></h1>
-      <p>Trouvez et réservez vos meilleures soirées en un clin d'oeil!</p>
-      <%= link_to 'Voir les offres', events_index_path, class: 'btn button' %>
+    <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+      <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
+        <h1 class="mb-4"><strong>Air Fiestas</strong></h1>
+        <p class="mb-4">Trouvez et réservez vos meilleures soirées en un clin d'oeil!</p>
+        <%= link_to 'Voir les offres', events_index_path, class: 'button' %>
+      </div>
     </div>
   </div>
 </div>
 
  <!-- Fiestas Grid -->
+
 <div class="container">
- <h1 class="my-4">Soirées à la une! </h1>
-  <% @events_sample.each do |event| %>
-    <div class="row text-center text-lg-left">
-      <div class="col-lg-4 col-md-4 col-6 card-fiesta">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-fiesta-infos">
-          <div>
-            <h2><%= event.name %></h2>
-            <p>event.description!</p>
-            <p><strong> Organisateur :</strong> <%= event.organizer %></p>
-          </div>
-          <h2 class="card-fiesta-"><strong> Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-  <div class="row text-center text-lg-left">
-      <div class="col-lg-4 col-md-4 col-6 card-fiesta">
-        <img src="https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc="/>
-        <div class="card-fiesta-infos">
-          <div>
-            <h2><%= Soirée brésilienne %></h2>
-            <p>Le meilleur des soirées brésiliennes!!</p>
-            <p><strong> Organisateur :</strong> <%= Laurent %></p>
-          </div>
-          <h2 class="card-fiesta"><strong> Ouvert :</strong> Oui </h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-
-    <div class="row text-center text-lg-left">
-      <div class="col-lg-4 col-md-4 col-6 card-fiesta">
-        <img src="https://media.istockphoto.com/id/1203977014/fr/photo/les-gens-c%C3%A9l%C3%A9brant-et-dansant-le-carnaval-br%C3%A9silien-au-carnaval-d%C3%A9cole.jpg?s=1024x1024&w=is&k=20&c=06UwYWeuTMc01UrNu-hPDjsgtpioo2Xbsx2wQIecyNs=" alt="Soirée 1" />
-        <div class="card-fiesta-infos">
-          <div>
-            <h2><%= Soirée mexicaine %></h2>
-            <p>Fajitas à volonté!!</p>
-            <p><strong> Organisateur :</strong> <%= Jane %></p>
-          </div>
-          <h2 class="card-fiesta-"><strong> Ouvert :</strong> Oui </h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-
-    <div class="row text-center text-lg-left">
-      <div class="col-lg-4 col-md-4 col-6 card-fiesta">
-        <img src="https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc=" alt="Soirée 1" />
-        <div class="card-fiesta-infos">
-          <div>
-            <h2><%= Soirée africaine %></h2>
-            <p>Le meilleur des soirées afro beats!!</p>
-            <p><strong> Organisateur :</strong> <%= steph %></p>
-          </div>
-          <h2 class="card-fiesta-"><strong> Ouvert :</strong> Non </h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1 class="my-4">Soirées à la une!</h1>
+  <%= render 'card_fiesta' %>
 </div>
 
-<!-- Fiestas Footer -->
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Fiestas organisées <i class="fas fa-heart"></i> pour votre pur bonheur...
-  </div>
-</div>
+
+<!-- Fiestas Footer in the layout -->
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
