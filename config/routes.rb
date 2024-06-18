@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'myevents', to: 'myevents#index'
+  get 'myevents', to: 'myevents#index', as: 'my_events'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
