@@ -6,7 +6,7 @@ $text-decoration: none;
 
 
 .button {
-  background-color: $fourth-color;
+  background-color: $mixed-green-color;
   color: $primary-color;
   padding: $button-padding;
   border-radius: $button-border-radius;
@@ -16,7 +16,7 @@ $text-decoration: none;
   display: inline-block;
 
   &:hover {
-    background-color: $fourth-color;
+    background-color: $mixed-green-color;
     color: $primary-color;
     opacity: 0.7;
     text-decoration: $text-decoration;
