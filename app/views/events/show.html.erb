@@ -1,19 +1,25 @@
-<h1 class="h1-line">L'evenement <%= @event.name %> en détail </h1>
 
-<div class="container my-4">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title"><%= @event.name %></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><%= @event.address %></h6>
-          <p class="card-text"><%= @event.description %></p>
-          <p class="card-text"><strong>Date et heure :</strong> <%= @event.date_time ? @event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
-          <p class="card-text"><strong>Ouvert :</strong> <%= @event.open ? 'Oui' : 'Non' %></p>
-          <p class="card-text"><strong>Utilisateur ID :</strong> <%= @event.user_id %></p>
-          <a href="<%= events_path %>" class="btn btn-secondary mt-3">Retour à la liste</a>
+<div class="container">
+  <h1 class="h1-line my-4">L'evenement <%= @event.name %> en détail
+  </h1>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><%= @event.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= @event.address %></h6>
+              <p class="card-text"><%= @event.description %></p>
+              <p class="card-text"><strong>Date et heure :</strong> <%= @event.date_time ? @event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
+              <p class="card-text"><strong>Ouvert :</strong> <%= @event.open ? 'Oui' : 'Non' %></p>
+              <p class="card-text"><strong>Créateur de l'évènement :</strong> <%= @event.user.name %> <%= @event.user.firstname %></p>
+              <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
+  <%= form.submit "S'inscrire à cet événement", class: 'btn btn-primary' %>
+<% end %>
+              <a href="<%= events_path %>" class="btn btn-secondary mt-3">Retour à la liste</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>

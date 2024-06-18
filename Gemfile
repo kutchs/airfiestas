@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.1.2"
 # Bundle Devise pour authentification utilisateur
 gem "devise"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 
@@ -50,6 +51,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+gem "cloudinary"
 
 group :development, :test do
   gem "dotenv-rails"

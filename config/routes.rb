@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :events do
     resources :reservations, only: [:new, :create]
+    member do
+      post 'register'
+    end
   end
 
   get "myevents", to: "myevents#index"
