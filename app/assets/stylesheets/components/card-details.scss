@@ -1,0 +1,110 @@
+.card-top {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  height: 250px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(208, 201, 201);
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  .image {
+    height: 200px;
+    width: 250px;
+    margin: 10px;
+  }
+
+  .event-infos {
+    padding: 10px;
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: left;
+  }
+
+  p {
+    font-weight: light;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+.card-middle {
+  height: 200px;
+  width: 80%;
+  position: relative;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://media.istockphoto.com/id/1189064346/fr/photo/carte-de-la-ville-avec-pin-pointers-3d-image-de-rendu.jpg?s=612x612&w=0&k=20&c=9SRCp-3wwPBCdXEUp8M4gRYWm7d3GJ3MQpoZqgmZQCA=);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    color: $mixed-green-color;
+  }
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(208, 201, 201);
+  background-color: white;
+
+  .mini-card-1,
+  .mini-card-2,
+  .mini-card-3 {
+    height: 150px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .mini-card-1 {
+    background-color: $secondary-color;
+  }
+
+  .mini-card-2 {
+    background-color: $primary-color;
+  }
+
+  .mini-card-3 {
+    background-color: $fourth-color;
+  }
+}
