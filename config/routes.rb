@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   get 'reservations/new'
-  get 'reservations/update'
+  patch 'reservations/update'
   get 'myevents/index'
   get 'events/index'
   get 'events/show'
   get 'events/new'
   get 'events/edit'
   get 'events/create'
-  get 'events/update'
-  get 'events/destroy'
+  patch 'events/update'
+  delete 'events/destroy'
   devise_for :users
   root to: "pages#home"
   resources :events do

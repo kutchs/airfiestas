@@ -8,11 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirFiestas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
   </head>
 
   <body class="background-white">
   <%= render "shared/navbar" %>
-    <%= yield %>
   <%= render "shared/flashes" %>
+  <%= yield %>
+  <%= render "shared/footer" %>
   </body>
 </html>
