@@ -3,7 +3,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="p-4 card-fiesta">
           <% if event.image.attached? %>
-            <%= cl_image_tag(event.image.key, class: "img-fluid") %>
+            <%= cl_image_tag(event.image.key, class: "img-fluid", style: 'border-radius: 5px;') %>
           <% end %>
 
           <div class="card-fiesta-infos">
@@ -12,9 +12,9 @@
               <p><%= event.address%></p>
               <p><%= event.description%></p>
               <p><strong> Organisateur :</strong> <%= event.user.name %> <%= event.user.firstname %></p>
-              <%= link_to 'Réserver', reservations_new_path, class: 'button', style: 'padding: 6px 12px; font-size: 14px; margin-top: 20px;' %>
+              <%= link_to 'Voir les détails', event_path(event), class: 'button', style: 'padding: 6px 12px; font-size: 14px; margin-top: 30px;' %>
             </div>
-            <h3 class="card-fiesta-"><strong> Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></h2>
+            <h3 class="card-fiesta-"><strong> Ouvert :</strong> <%= event.open ? 'Oui' : 'Non' %></h3>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
           </div>
         </div>
