@@ -10,7 +10,7 @@
             <div>
               <h2><%= event.name %></h2>
               <p><%= event.address%></p>
-              <p><%= event.description!%></p>
+              <p><%= event.description%></p>
               <p><strong> Organisateur :</strong> <%= event.user.name %> <%= event.user.firstname %></p>
               <%= link_to 'Réserver', reservations_new_path, class: 'button', style: 'padding: 6px 12px; font-size: 14px; margin-top: 20px;' %>
             </div>
