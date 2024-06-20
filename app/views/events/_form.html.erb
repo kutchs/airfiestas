@@ -4,7 +4,7 @@
     <%= form.input :name, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the name of your event' } %>
     <%= form.input :address, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the adress of your event' } %>
     <%= form.input :description, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter a description of your event' } %>
-    <%= form.input :date_time, as: :datetime, class: "form-control form-control-lg", input_html: {value: params[:start_date], class: 'field-bg-color field-no-border'}, wrapper_html: { class: 'mb-3' }, html5: true %>
+    <%= form.input :date_time, class: "form-control form-control-lg", input_html: {value: params[:start_date], class: 'field-bg-color field-no-border'}, wrapper_html: { class: 'mb-3' }, html5: true %>
     <%= form.input :image, as: :file %>
     <%= form.hidden_field :open, value: true %>
   </div>
