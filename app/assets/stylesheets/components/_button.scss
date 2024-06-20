@@ -4,19 +4,23 @@ $transition-duration: 0.3s;
 $transition-timing: ease;
 $text-decoration: none;
 
-
 .button {
-  background-color: $mixed-green-color;
-  color: $primary-color;
+  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  max-width: 500px;
   padding: $button-padding;
+  margin: 0 auto;
+  background-color:$mixed-pink-color;
   border-radius: $button-border-radius;
-  transition:$transition-duration $transition-timing;
-  text-decoration: $text-decoration;
-  opacity: 1;
-  display: inline-block;
+  box-shadow:0 0 0 10px #ffffffeb;
+  transition: background-color $transition-duration $transition-timing, color $transition-duration $transition-timing, opacity $transition-duration $transition-timing;
 
   &:hover {
-    background-color: $mixed-green-color;
+    background-color: $mixed-pink-color;
     color: $primary-color;
     opacity: 0.7;
     text-decoration: $text-decoration;

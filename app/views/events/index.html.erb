@@ -1,15 +1,33 @@
-<div class="index-top-card mt-4 p-4 mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc=);">
+<div class="container">
+  <h1 class="my-4" style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 80px;">
+    Tous nos Events
+  </h1>
+</div>
+
+<div class="index-top-card mt-4 p-4 mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc=);">
   <div class="container">
-    <div class="row justify-content-center align-items-start" style="min-height: 70vh;">
+    <div class="row justify-content-center align-items-center">
       <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
-        <h1 class="mb-4"><strong>Tous nos Events</strong></h1>
-        <p class="mb-4">Vous trouverez certainement votre bonheur...</p>
+        <div id="cover">
+          <form method="get" action="">
+            <div class="tb">
+              <div class="td">
+                <input type="text" placeholder="Saisis ta ville et trouves ta soirée de rêve!" required>
+              </div>
+              <div class="td" id="s-cover">
+                <button type="submit">
+                  <div id="s-circle"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Fiestas Grid -->
-<div class="container">
+<div class="container mt-5">
   <%= render 'card' %>
 </div>
