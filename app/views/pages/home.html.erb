@@ -2,16 +2,11 @@
 
 <div class="banner mt-4 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.civitatis.com/blog/wp-content/uploads/2023/05/festivales-musica-mas-esperados-verano.jpg);">
   <div class="container">
-   <div class="row align-items-start justify-content-center">
-      <div class="mb-8 col-8">
-        <input type="text" class="form-control search-button" placeholder="Saisir une ville et trouvez votre soirée">
-      </div>
-    </div>
-    <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
-      <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
-        <h1 class="mb-4"><strong>Air Fiestas</strong></h1>
-        <p class="mb-4">Trouvez et réservez vos meilleures soirées en un clin d'oeil!</p>
-        <%= link_to 'Voir les offres', events_path, class: 'button' %>
+
+    <div class="row justify-content-center align-items-center";>
+      <div class="col-10 col-md-6 text-center">
+        <%= image_tag asset_path('AIR FIESTAS font style 250p.png'),style:"height:110px; margin-bottom: 100px" %>
+        <%= link_to 'Je réserve ma soirée de rêve!', events_path, class: 'button nav-link', style:"font-size:25px" %>
       </div>
     </div>
   </div>

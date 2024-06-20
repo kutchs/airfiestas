@@ -1,17 +1,90 @@
-$search-button-color: rgb(48, 46, 46);
-$search-button-background: #F8F2E9;
-$search-button-hover-background: rgba(248,242,233,0.7);
-$search-button-padding: 8px 24px;
-$search-button-border-radius: 50px;
+* {
+  outline: none;
+}
 
-.search-button {
-  color: $search-button-color;
-  padding: $search-button-padding;
-  border-radius: $search-button-border-radius;
-  background-color: $search-button-background;
+.tb {
+  display: table;
+  width: 100%;
+}
 
-  &:hover {
-    background-color: $search-button-hover-background;
-    color: $search-button-color;
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+input,
+button {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+#cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  max-width: 500px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #ff7575;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px #ff7c7c, 0 0 0 10px #ffffffeb;
+
+  form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input[type="text"] {
+      flex: 1;
+      height: 40px;
+      font-size: 20px;
+      padding: 0 10px;
+      background-color: #ff7575;
+      color: #fff;
+      border: none;
+      border-radius: 20px 0 0 20px;
+
+      &::placeholder {
+        color: #e16868;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: #ff7575;
+      border: none;
+      border-radius: 0 20px 20px 0;
+
+      #s-circle {
+        width: 20px;
+        height: 20px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        margin-right: -8px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 3px;
+          background: #fff;
+          transform: rotate(45deg);
+          top: 14px;
+          left: 10px;
+        }
+      }
+    }
   }
 }
