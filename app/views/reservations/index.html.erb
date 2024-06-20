@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="my-2 text-center"><strong>Mes Réservations</strong></h1>
+  <% if @reservations.any? %>
+     <div class="row">
+    <% @reservations.each do |reservation| %>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="p-4 card-fiesta">
+          <% if reservation.event.image.attached? %>
+            <%= cl_image_tag(reservation.event.image.key, class: "img-fluid", style: 'border-radius: 5px;') %>
+          <% end %>
+
+          <div class="card-fiesta-infos">
+            <div>
+              <h2><%= reservation.event.name %></h2>
+              <p><%= reservation.event.address%></p>
+              <p><%= reservation.event.description%></p>
+              <p><strong> Organisateur :</strong> <%= reservation.event.user.name %> <%= reservation.event.user.firstname %></p>
+              <%= link_to 'Voir les détails', event_path(reservation.event), class: 'button', style: 'padding: 6px 12px; font-size: 14px; margin-top: 30px;' %>
+            </div>
+            <h3 class="card-fiesta-"><strong> Ouvert :</strong> <%= reservation.event.open ? 'Oui' : 'Non' %></h3>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-fiesta-user avatar-bordered" />
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% else %>
+    <p class="text-center">Vous n'avez pas encore de réservations.</p>
+  <% end %>
+</div>
