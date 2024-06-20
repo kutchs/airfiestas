@@ -2,9 +2,12 @@
   background-color: #FFFFFF;
 }
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 56px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 200px;
+  text-align: center
 }
+
 h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 45px;
@@ -14,7 +17,6 @@ h3 {
   font-size: 32px;
 }
 .h1-line {
-  color: $secondary-color; // Utilisation de la couleur primaire
-  border-bottom: 3px solid $secondary-color; // utilisation de la couleur secondaire
-  font-weight:bolder
+  color: $secondary-color;
+  border-bottom: 3px solid $secondary-color;
 }
