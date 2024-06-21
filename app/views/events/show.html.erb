@@ -1,6 +1,9 @@
+<% content_for :body_class, "show-page" %>
+
 <div class="container">
-  <h1 class="my-4" style= "font-family:Bebas Neue, sans-serif;font-weight:400;font-style:normal;font-size:80px;">
- Détail de l'événement</h1>
+  <h1 class="mt-4" style= "font-family:Bebas Neue, sans-serif;font-weight:400;font-style:normal;font-size:80px;">
+    Détail de l'événement
+  </h1>
   <div class="row justify-content-center">
     <div class="col-lg-10 col-md-6 col-12 mb-4 p-4">
       <div class="card-top d-flex align-items-center mx-auto mt-5">
@@ -8,38 +11,28 @@
           <%= cl_image_tag(@event.image.key, class: "image") %>
         <% end %>
         <div class="event-infos flex-grow-1 p-2 position-relative">
-          <h1><strong><%= @event.name %></strong></h1>
+          <h1 class="gradient-text"><strong><%= @event.name %></strong></h1>
           <p>Une phrase pour décrire votre événement : <br>
-          <strong> <%= @event.description %></strong></p>
+          <strong><%= @event.description %></strong></p>
           <p><strong>Ouvert :</strong> <%= @event.open ? 'Oui' : 'Non' %></p>
+          <p><strong>Date et heure :</strong> <%= @event.date_time ? @event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
+          <p><strong>Organisateur :</strong> <%= @event.user.name %> <%= @event.user.firstname %></p>
           <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
-            <%= form.submit "Réserver ma place", class: "button w-100", style: 'border-radius:5px; margin-top: 20px;' %>
+            <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 20px;' %>
           <% end %>
         </div>
       </div>
 
-      <div class="card-middle d-flex align-items-center justify-content-center mx-auto my-1 p-4">
-        <h2 class="mb-2 text-center"> Adresse :<br>
+      <div class="card-middle d-flex align-items-center justify-content-center mx-auto p-4">
+        <h2 class="text-center gradient-text">Adresse :<br>
         <strong><%= @event.address %></strong></h2>
       </div>
 
-      <div class="card-bottom d-flex align-items-center justify-content-evenly mx-auto my-1">
-        <div class="d-flex mini-card-1 text-white text-center p-3 rounded justify-content-center">
-          <p><strong>Date et heure :</strong> <%= @event.date_time ? @event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
-        </div>
-        <div class="d-flex mini-card-2 text-center text-black p-3 rounded justify-content-center">
-          <p><strong>Ouvert :</strong> <%= @event.open ? 'Oui' : 'Non' %></p>
-        </div>
-        <div class="d-flex mini-card-3 text-center text-white p-3 rounded justify-content-center">
-          <p><strong>Organisateur :</strong> <%= @event.user.name %> <%= @event.user.firstname %></p>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end mt-3">
+      <div class="button-container d-flex justify-content-end mt-3">
         <a href="<%= events_path %>" class="btn btn-secondary mt-3">Retour à la liste</a>
         <% if @event.user == current_user %>
           <%= form_with url: event_path(@event), method: :delete, class: 'd-inline' do %>
-          <%= submit_tag "Supprimer l'évènement", class: 'btn btn-danger mt-3 ms-2' %>
+            <%= submit_tag "Supprimer l'évènement", class: 'btn btn-danger mt-3 ms-2' %>
           <% end %>
         <% end %>
       </div>

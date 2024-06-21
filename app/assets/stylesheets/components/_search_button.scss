@@ -31,7 +31,7 @@ button {
   max-width: 500px;
   padding: 10px;
   margin: 0 auto;
-  background-color: #ff7575;
+  background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 10px 40px #ff7c7c, 0 0 0 10px #ffffffeb;
 
@@ -45,13 +45,13 @@ button {
       height: 40px;
       font-size: 20px;
       padding: 0 10px;
-      background-color: #ff7575;
-      color: #fff;
+      background-color: #fff;
+      color: $background-grey-color;
       border: none;
       border-radius: 20px 0 0 20px;
 
       &::placeholder {
-        color: #e16868;
+        color:$background-grey-color;
       }
     }
 
@@ -62,7 +62,7 @@ button {
       width: 40px;
       height: 40px;
       cursor: pointer;
-      background-color: #ff7575;
+      background-color: #fff;
       border: none;
       border-radius: 0 20px 20px 0;
 

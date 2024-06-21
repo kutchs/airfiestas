@@ -4,24 +4,22 @@
   </h1>
 </div>
 
-<div class="index-top-card mt-4 p-4 mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1947952028/fr/photo/friends-enjoying-carnival-at-home.jpg?s=1024x1024&w=is&k=20&c=LX0K_1UsJhnXURj42liKKspJrXhCzmlBEioISCq6Ooc=);">
+<div class="index-top-card mt-4 p-4 mb-5" <%= image_tag asset_path('index_image.jpg')%>>
   <div class="container">
     <div class="row justify-content-center align-items-center">
-      <div class="col-8 col-md-6 text-center p-3" style="background: rgba(0, 0, 0, 0.5);">
-        <div id="cover">
-          <form method="get" action="">
-            <div class="tb">
-              <div class="td">
-                <input type="text" placeholder="Saisis ta ville et trouves ta soirée de rêve!" required>
-              </div>
-              <div class="td" id="s-cover">
-                <button type="submit">
-                  <div id="s-circle"></div>
-                </button>
-              </div>
+      <div id="cover">
+        <form method="get" action="">
+          <div class="tb">
+            <div class="td">
+              <input type="text" placeholder="Saisis ta ville ici !" required>
             </div>
-          </form>
-        </div>
+            <div class="td" id="s-cover">
+              <button type="submit">
+                <div id="s-circle"></div>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
