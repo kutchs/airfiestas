@@ -10,8 +10,8 @@
 require "open-uri"
 require 'faker'
 
-User.destroy_all if Rails.env.development?
-Event.destroy_all if Rails.env.development?
+User.destroy_all
+Event.destroy_all
 
 user1 = User.create!(email: "hello@hotmail.com", password: "123456", name: "John", firstname: "Doe")
 
