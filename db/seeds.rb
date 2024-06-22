@@ -40,7 +40,7 @@ event2 = Event.create!(
   }
 )
 file = URI.open("https://cdn.sortiraparis.com/images/1004/15516/133763-accronight.png")
-event2.image.attach(io: file, filename: "acro.png", content_type: "image/png")
+event2.image.attach(io: file, filename: "accro.png", content_type: "image/png")
 event2.save
 
 event3 = Event.create!(
@@ -54,7 +54,7 @@ event3 = Event.create!(
   }
 )
 file = URI.open("https://www.wonderbox.fr/wondermedias/sys_master/productmedias/h24/hfe/1629258-560x373.jpg")
-event3.image.attach(io: file, filename: "acro.png", content_type: "image/png")
+event3.image.attach(io: file, filename: "peinture.jpg", content_type: "image/jpg")
 event3.save
 
 event4 = Event.create!(
@@ -82,7 +82,7 @@ event5 = Event.create!(
   }
 )
 file = URI.open("https://www.destinationcocktails.fr/wp-content/uploads/2021/04/theme-soiree-creole-min.jpeg")
-event5.image.attach(io: file, filename: "concert.jpg", content_type: "image/jpg")
+event5.image.attach(io: file, filename: "creole.jpeg", content_type: "image/jpeg")
 event5.save
 
 
@@ -97,7 +97,7 @@ event6 = Event.create!(
   }
 )
 file = URI.open("https://img-4.linternaute.com/e9-DdluJQ9o1pfbPPdXl_z3TkWg=/1500x/smart/cd8e4675a2c94d089ca136f2b5448123/ccmcms-linternaute/60299137.png")
-event6.image.attach(io: file, filename: "electro.jpg", content_type: "image/jpg")
+event6.image.attach(io: file, filename: "electro.png", content_type: "image/png")
 event6.save
 
 event7 = Event.create!(
@@ -139,5 +139,5 @@ event9 = Event.create!(
   }
 )
 file = URI.open("https://www.foire-montpellier.com/wp-content/uploads/2023/09/rodrigo.png")
-event9.image.attach(io: file, filename: "kitch.jpg", content_type: "image/jpg")
+event9.image.attach(io: file, filename: "kitch.png", content_type: "image/png")
 event9.save
