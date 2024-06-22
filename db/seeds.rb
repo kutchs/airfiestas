@@ -28,6 +28,7 @@ event1 = Event.create!(
 file = URI.open("https://www.talence-athletisme.fr/wp-content/uploads/2022/05/Capture-de%CC%81cran-2022-05-19-a%CC%80-11.30.52-300x196.png")
 event1.image.attach(io: file, filename: "chefsoiree.png", content_type: "image/png")
 event1.save
+puts "#{event1.name} created"
 
 event2 = Event.create!(
   {
@@ -42,6 +43,7 @@ event2 = Event.create!(
 file = URI.open("https://cdn.sortiraparis.com/images/1004/15516/133763-accronight.png")
 event2.image.attach(io: file, filename: "accro.png", content_type: "image/png")
 event2.save
+puts "#{event2.name} created"
 
 event3 = Event.create!(
   {
@@ -56,6 +58,7 @@ event3 = Event.create!(
 file = URI.open("https://www.wonderbox.fr/wondermedias/sys_master/productmedias/h24/hfe/1629258-560x373.jpg")
 event3.image.attach(io: file, filename: "peinture.jpg", content_type: "image/jpg")
 event3.save
+puts "#{event3.name} created"
 
 event4 = Event.create!(
   {
@@ -70,6 +73,7 @@ event4 = Event.create!(
 file = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2024/04/arenes-lyriques-concert-montmartre-paris-zigzag-1.jpg")
 event4.image.attach(io: file, filename: "concert.jpg", content_type: "image/jpg")
 event4.save
+puts "#{event4.name} created"
 
 event5 = Event.create!(
   {
@@ -84,6 +88,8 @@ event5 = Event.create!(
 file = URI.open("https://www.destinationcocktails.fr/wp-content/uploads/2021/04/theme-soiree-creole-min.jpeg")
 event5.image.attach(io: file, filename: "creole.jpeg", content_type: "image/jpeg")
 event5.save
+puts "#{event5.name} created"
+
 
 
 event6 = Event.create!(
@@ -99,6 +105,7 @@ event6 = Event.create!(
 file = URI.open("https://img-4.linternaute.com/e9-DdluJQ9o1pfbPPdXl_z3TkWg=/1500x/smart/cd8e4675a2c94d089ca136f2b5448123/ccmcms-linternaute/60299137.png")
 event6.image.attach(io: file, filename: "electro.png", content_type: "image/png")
 event6.save
+puts "#{event6.name} created"
 
 event7 = Event.create!(
   {
@@ -113,6 +120,7 @@ event7 = Event.create!(
 file = URI.open("https://cloudfront-eu-central-1.images.arcpublishing.com/leparisien/RB3QW5OBYRADHFY5FSC25I3T24.jpg")
 event7.image.attach(io: file, filename: "train.jpg", content_type: "image/jpg")
 event7.save
+puts "#{event7.name} created"
 
 event8 = Event.create!(
   {
@@ -127,6 +135,7 @@ event8 = Event.create!(
 file = URI.open("https://www.nimesurbantrail.com/wp-content/uploads/2022/06/De%CC%81guisement-1-vainqueur.png")
 event8.image.attach(io: file, filename: "deguiser.png", content_type: "image/png")
 event8.save
+puts "#{event8.name} created"
 
 event9 = Event.create!(
   {
@@ -141,3 +150,4 @@ event9 = Event.create!(
 file = URI.open("https://www.foire-montpellier.com/wp-content/uploads/2023/09/rodrigo.png")
 event9.image.attach(io: file, filename: "kitch.png", content_type: "image/png")
 event9.save
+puts "#{event9.name} created"
