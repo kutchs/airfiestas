@@ -55,8 +55,8 @@ event3 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.talence-athletisme.fr/wp-content/uploads/2022/05/Capture-de%CC%81cran-2022-05-19-a%CC%80-11.30.52-300x196.png")
-event3.image.attach(io: file, filename: "peinture.png", content_type: "image/png")
+file = URI.open("https://static.actu.fr/uploads/2019/03/25EpouseMoiCocotte_%C2%A9SightBySightPhotography_HAPPYPAINT.jpg")
+event3.image.attach(io: file, filename: "peinture.jpg", content_type: "image/jpg")
 event3.save
 puts "#{event3.name} created"
 
@@ -147,7 +147,7 @@ event9 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.foire-montpellier.com/wp-content/uploads/2023/09/rodrigo.png")
-event9.image.attach(io: file, filename: "kitch.png", content_type: "image/png")
+file = URI.open("https://www.benmazue.com/wp-content/uploads/2023/12/kitch-4-1.jpg")
+event9.image.attach(io: file, filename: "kitch.jpg", content_type: "image/jpg")
 event9.save
 puts "#{event9.name} created"
