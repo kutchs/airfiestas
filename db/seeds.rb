@@ -55,8 +55,8 @@ event3 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.wonderbox.fr/wondermedias/sys_master/productmedias/h24/hfe/1629258-560x373.jpg")
-event3.image.attach(io: file, filename: "peinture.jpg", content_type: "image/jpg")
+file = URI.open("./painting.jpg")
+event3.image.attach(io: file, filename: "painting.jpg", content_type: "image/jpg")
 event3.save
 puts "#{event3.name} created"
 
