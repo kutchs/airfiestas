@@ -25,8 +25,8 @@ event1 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.talence-athletisme.fr/wp-content/uploads/2022/05/Capture-de%CC%81cran-2022-05-19-a%CC%80-11.30.52-300x196.png")
-event1.image.attach(io: file, filename: "chefsoiree.png", content_type: "image/png")
+file = URI.open("./chef.jpg")
+event1.image.attach(io: file, filename: "chef.jpg", content_type: "image/jpg")
 event1.save
 puts "#{event1.name} created"
 
@@ -40,8 +40,8 @@ event2 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://cdn.sortiraparis.com/images/1004/15516/133763-accronight.png")
-event2.image.attach(io: file, filename: "accro.png", content_type: "image/png")
+file = URI.open("./acrobranche.jpg")
+event2.image.attach(io: file, filename: "accro.jpg", content_type: "image/jpg")
 event2.save
 puts "#{event2.name} created"
 
@@ -70,8 +70,8 @@ event4 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2024/04/arenes-lyriques-concert-montmartre-paris-zigzag-1.jpg")
-event4.image.attach(io: file, filename: "concert.jpg", content_type: "image/jpg")
+file = URI.open("./soireemusique.png")
+event4.image.attach(io: file, filename: "soireemusique.png", content_type: "image/png")
 event4.save
 puts "#{event4.name} created"
 
@@ -118,8 +118,8 @@ event7 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://res.cloudinary.com/dqbzdz3ob/image/upload/v1719067408/development/ux3z01ejwurluxk4iv35nismyz3p.jpg")
-event7.image.attach(io: file, filename: "train.jpg", content_type: "image/jpg")
+file = URI.open("./train.png")
+event7.image.attach(io: file, filename: "train.png", content_type: "image/png")
 event7.save
 puts "#{event7.name} created"
 
