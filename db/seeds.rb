@@ -55,8 +55,8 @@ event3 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("./www.wonderbox.fr/wondermedias/sys_master/productmedias/h24/hfe/1629258-560x373.jpg")
-event3.image.attach(io: file, filename: "peinture.jpg", content_type: "image/jpg")
+file = URI.open("./painting.jpg")
+event3.image.attach(io: file, filename: "painting.jpg", content_type: "image/jpg")
 event3.save
 puts "#{event3.name} created"
 
@@ -85,10 +85,11 @@ event5 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.destinationcocktails.fr/wp-content/uploads/2021/04/theme-soiree-creole-min.jpeg")
-event5.image.attach(io: file, filename: "creole.jpeg", content_type: "image/jpeg")
+file = URI.open("./creole.jpg")
+event5.image.attach(io: file, filename: "creole.jpg", content_type: "image/jpg")
 event5.save
 puts "#{event5.name} created"
+
 
 
 
@@ -102,8 +103,8 @@ event6 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://img-4.linternaute.com/e9-DdluJQ9o1pfbPPdXl_z3TkWg=/1500x/smart/cd8e4675a2c94d089ca136f2b5448123/ccmcms-linternaute/60299137.png")
-event6.image.attach(io: file, filename: "electro.png", content_type: "image/png")
+file = URI.open("./electro.jpg")
+event6.image.attach(io: file, filename: "electro.jpg", content_type: "image/jpg")
 event6.save
 puts "#{event6.name} created"
 
@@ -117,7 +118,7 @@ event7 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://cloudfront-eu-central-1.images.arcpublishing.com/leparisien/RB3QW5OBYRADHFY5FSC25I3T24.jpg")
+file = URI.open("https://res.cloudinary.com/dqbzdz3ob/image/upload/v1719067408/development/ux3z01ejwurluxk4iv35nismyz3p.jpg")
 event7.image.attach(io: file, filename: "train.jpg", content_type: "image/jpg")
 event7.save
 puts "#{event7.name} created"
@@ -132,7 +133,7 @@ event8 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.nimesurbantrail.com/wp-content/uploads/2022/06/De%CC%81guisement-1-vainqueur.png")
+file = URI.open("./deguiser.png")
 event8.image.attach(io: file, filename: "deguiser.png", content_type: "image/png")
 event8.save
 puts "#{event8.name} created"
@@ -147,7 +148,7 @@ event9 = Event.create!(
     user_id: user1.id
   }
 )
-file = URI.open("https://www.foire-montpellier.com/wp-content/uploads/2023/09/rodrigo.png")
-event9.image.attach(io: file, filename: "kitch.png", content_type: "image/png")
+file = URI.open("./kitch.jpg")
+event9.image.attach(io: file, filename: "kitch.jpg", content_type: "image/jpg")
 event9.save
 puts "#{event9.name} created"
