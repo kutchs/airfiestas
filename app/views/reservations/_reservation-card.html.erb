@@ -1,24 +1,24 @@
 <div class="row">
-  <% @events.each do |event| %>
+  <% @reservations.each do |reservation| %>
     <div class="col-lg-4 col-md-6 mb-4">
-      <%= link_to event_path(event), class: '' do %>
+      <%= link_to event_path(reservation.event), class: '' do %>
         <div class="first evt">
-          <% if event.image.attached? %>
-            <%= cl_image_tag(event.image.key, class: "evt-profile-img") %>
+          <% if reservation.event.image.attached? %>
+            <%= cl_image_tag(reservation.event.image.key, class: "evt-profile-img") %>
           <% end %>
           <div class="evt-description-bk"></div>
           <%# <div class="evt-logo">
             <%= image_tag asset_path('LOGO AIR FIESTAS.png'), style: "height:80px; width:80px;" %>
           <%# </div> %>
-          <p><%= event.name %></p>
+          <p><%= reservation.event.name %></p>
           <div class="evt-description">
-            <p><%= event.description %></p>
+            <p><%= reservation.event.description %></p>
           </div>
           <div class="evt-date">
-            <p><%= event.date_time %></p>
+            <p><%= reservation.event.date_time %></p>
           </div>
           <div class="evt-btn">
-            <h3 class="card-fiesta"><%= event.open ? 'OUVERT' : 'COMPLET' %></h3>
+            <h3 class="card-fiesta"><%= reservation.event.open ? 'OUVERT' : 'COMPLET' %></h3>
           </div>
         </div>
       <% end %>

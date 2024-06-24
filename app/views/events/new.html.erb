@@ -1,9 +1,15 @@
+<% content_for :body_class, "show-page" %>
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-6 mt-">
-      <h1 class="h1-line">Ajouter un évènement</h1>
-      <%= render 'form' %>
+    <div class="col-lg-10 col-md-6 mt-4">
+      <h1 style="font-family:Bebas Neue, sans-serif; font-weight: 400; font-style: normal; font-size: 80px;">Crées ton événement!</h1>
+    </div>
+    <div class="col-md-6 mt-1 new-card" style="position: relative;">
+      <div class="background-container"></div>
+      <div class="content-container">
+        <%= render 'form' %>
+      </div>
     </div>
   </div>
 </div>
