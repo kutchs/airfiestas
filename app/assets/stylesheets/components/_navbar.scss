@@ -1,10 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
+  vertical-align: middle;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  vertical-align: middle;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -12,8 +14,17 @@
 }
 
 .nav-link {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  color: #000; /* Couleur de texte par défaut */
+  transition: color 0.3s ease; /* Animation de transition pour la couleur */
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #f415da; /* Couleur rose pour le survol, le focus et l'activation */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens lors du survol, du focus et de l'activation */
+  }
 }
