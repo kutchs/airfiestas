@@ -19,7 +19,7 @@
           <p><strong>Organisateur :</strong> <%= @event.user.name %> <%= @event.user.firstname %></p>
 
           <% if current_user.reservations.exists?(event: @event) %>
-            <p class="button">Vous avez déjà réservé cet événement.</p>
+            <p class="button">Déjà réservé!</p>
           <% else %>
             <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
               <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 20px;' %>
