@@ -1,7 +1,7 @@
 <% content_for :body_class, "show-page" %>
 
 <div class="container">
-  <h1 class="mt-4" style= "font-family:Bebas Neue, sans-serif;font-weight:400;font-style:normal;font-size:80px;">
+  <h1 class="mt-4" style="font-family:Bebas Neue, sans-serif;font-weight:400;font-style:normal;font-size:80px;">
     Détail de l'événement
   </h1>
   <div class="row justify-content-center">
@@ -17,8 +17,13 @@
           <p><strong>Ouvert :</strong> <%= @event.open ? 'Oui' : 'Non' %></p>
           <p><strong>Date et heure :</strong> <%= @event.date_time ? @event.date_time.strftime("%d/%m/%Y %H:%M") : "Non spécifiée" %></p>
           <p><strong>Organisateur :</strong> <%= @event.user.name %> <%= @event.user.firstname %></p>
-          <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
-            <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 20px;' %>
+
+          <% if current_user.reservations.exists?(event: @event) %>
+            <p class="button">Vous avez déjà réservé cet événement.</p>
+          <% else %>
+            <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
+              <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 20px;' %>
+            <% end %>
           <% end %>
         </div>
       </div>
