@@ -1,5 +1,5 @@
 // Variables
-$footer-height: 60px;
+$footer-height: 80px;
 $footer-padding: 0px 50px;
 $footer-color: rgba(0, 0, 0, 0.3);
 $link-color: #fc466b;
@@ -18,6 +18,8 @@ $link-padding: 0px 10px;
   padding: $footer-padding;
   color: $footer-color;
   margin-top: auto;
+  line-height: 80px;
+
 
   .footer-links {
     display: flex;

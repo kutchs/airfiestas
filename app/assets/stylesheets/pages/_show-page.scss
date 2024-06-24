@@ -7,3 +7,13 @@
   background-size: cover;
   font-family: "Bebas Neue", sans-serif;
 };
+
+.custom-height {
+  height: 600px;
+}
+
+.full-height {
+  display: flex;
+  align-items: center;
+  height: 35%;
+}
