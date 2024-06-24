@@ -49,7 +49,7 @@ event3 = Event.create!(
   {
     name: "Apéro Peinture",
     description: "Aprenez à peindre en dégustant un verre de vin",
-    location: "18 cours de la soif33200 Margaux",
+    location: "18 cours de la soif 33200 Margaux",
     date_time: "2024-07-24",
     open: true,
     user_id: user1.id
@@ -64,7 +64,7 @@ event4 = Event.create!(
   {
     name: "Concert en plein air",
     description: "Profitez d'une soirée musicale en plein air avec des artistes locaux.",
-    location: "Parc de la Musique, 123 avenue des Chansons, 75001 Paris",
+    location: "123 avenue des Chansons, 75001 Paris",
     date_time: "2024-08-15",
     open: true,
     user_id: user1.id
@@ -79,7 +79,7 @@ event5 = Event.create!(
   {
     name: "Soirée créole",
     description: "Venez danser sur des rythmes créoles et déguster des plats typiques de la Réunion.",
-    location: "maison de la Réunion, 123 rue des saveurs, 75018 Paris",
+    location: "123 rue des saveurs, 75018 Paris",
     date_time: "2024-08-18",
     open: true,
     user_id: user1.id
@@ -96,7 +96,7 @@ event6 = Event.create!(
   {
     name: "Nuit blanche musicale",
     description: "Le bar de l'âne vous propose de vivre votre fête de la musique jusqu'au lever du soleil.",
-    location: "tour Eiffel, 75007 Paris",
+    location: "Tour Eiffel, 75007 Paris",
     date_time: "2024-08-22",
     open: true,
     user_id: user1.id
@@ -109,9 +109,9 @@ puts "#{event6.name} created"
 
 event7 = Event.create!(
   {
-    name: "Militer en pyjama pour les trains de nuit",
+    name: "Militez en pyjama pour les trains de nuit",
     description: "N'ayez plus honte de vos pyjamas ridicules et venez militer pour les trains de nuit.",
-    location: "rue du reveil pas matinal, 69000 Lyon",
+    location: "Rue du reveil pas matinal, 69000 Lyon",
     date_time: "2024-08-24",
     open: true,
     user_id: user1.id
@@ -124,9 +124,9 @@ puts "#{event7.name} created"
 
 event8 = Event.create!(
   {
-    name: "Soirée déguisement improbable",
+    name: "Soirée déguisée",
     description: "Venez déguisé en votre personnage de film préféré, mais en version improbable.",
-    location: "rue de la troupe, 74000 Annecy",
+    location: "Rue de la troupe, 74000 Annecy",
     date_time: "2024-08-12",
     open: true,
     user_id: user1.id
@@ -141,13 +141,13 @@ event9 = Event.create!(
   {
     name: "Soyez kitch pour notre soirée des années 70",
     description: "Ce qui ne vous tuera pas, vous rendra plus populaire, rejoignez notre soirée animée par les groupes des 70 que vous n'avez jamais connu",
-    location: "impasse de la rupture, 69000 Lyon",
+    location: "Impasse de la rupture, 69000 Lyon",
     date_time: "2024-08-01",
     open: true,
     user_id: user1.id
   }
 )
 file = URI.open("https://www.benmazue.com/wp-content/uploads/2023/12/kitch-4-1.jpg")
-event9.image.attach(io: file, filename: "kitch.jpg", content_type: "image/jpg")
+event9.image.attach(io: file, filename: "kitch.jpg", content_type: "image/")
 event9.save
 puts "#{event9.name} created"

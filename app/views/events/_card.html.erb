@@ -1,28 +1,28 @@
-<div class="row">
-  <% @events.each do |event| %>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <%= link_to event_path(event), class: '' do %>
-        <div class="first evt">
-          <% if event.image.attached? %>
-            <%= cl_image_tag(event.image.key, class: "evt-profile-img") %>
+<div class="container">
+  <div class="row">
+    <% @events.each do |event| %>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card-evt">
+          <%= link_to event_path(event) do %>
+            <% if event.image.attached? %>
+              <%= cl_image_tag(event.image.key, class: "card-img-top evt-profile-img") %>
+            <% end %>
+            <div class="card-body">
+              <h1 class="card-title"><%= truncate(event.name, length: 52) %></h1>
+              <h2 class="card-text"><%= truncate(event.description, length: 85) %></h2>
+              <div class="card-location">
+                <p>📍<%= event.location %></p>
+              </div>
+              <div class="evt-date">
+                <p><%= event.formatted_date %></p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <h3 class="card-fiesta"><%= event.open ? "S'inscrire" : "complet" %></h3>
+            </div>
           <% end %>
-          <div class="evt-description-bk"></div>
-          <%# <div class="evt-logo">
-            <%= image_tag asset_path('LOGO AIR FIESTAS.png'), style: "height:80px; width:80px;" %>
-          <%# </div> %>
-          <p><%= event.name %></p>
-          <p><%= event.location %></p>
-          <div class="evt-description">
-            <p><%= event.description %></p>
-          </div>
-          <div class="evt-date">
-            <p><%= event.date_time %></p>
-          </div>
-          <div class="evt-btn">
-            <h3 class="card-fiesta"><%= event.open ? 'OUVERT' : 'COMPLET' %></h3>
-          </div>
         </div>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

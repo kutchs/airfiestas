@@ -1,77 +1,97 @@
-.evt {
+.card-evt {
   display: inline-block;
   position: relative;
-  width: 350PX;
-  min-width: 350PX;
-  height: 350PX;
-  border-radius: 30px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 430px;
 
-  &-profile-img {
-    height: 70%;
-    width: 100%;
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .evt-profile-img {
+    height: 250px;
     object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 
-  &-description-bk {
-    background-image: linear-gradient(0deg, #3f5efb, #fc466b);
-    border-radius: 30px;
-    position: absolute;
-    top: 55%;
-    left: -5px;
-    height: 65%;
-    width: 108%;
-    transform: skew(19deg, -9deg);
+  .card-body {
+    background-color: #f8f9fa;
 
-    &.second {
-      background-image: linear-gradient(-20deg, #bb7413, #e7d25c);
+
+
+    .card-title {
+      color: #000000;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      text-align: left;
+      line-height: 1;
+    }
+
+    .card-text {
+      position: absolute;
+      color: #000000;
+      bottom: 80px;
+      width: 100%;
+      text-align: ◀️;
+      color: #131313;
+      font-size: 10px;
+      font-family: 'Arial', sans-serif;
+      padding: 8px 0;
+      margin: 4px 0;
+    }
+
+    .card-location {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      text-align: ◀️;
+      color: #131313;
+      font-size: 10px;
+      font-family: 'Arial', sans-serif;
+      padding: 8px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .evt-date {
+      position: absolute;
+      width: 90px; // Largeur fixe du fond de la date
+      height: 20px; // Hauteur fixe du fond de la date
+      top: 20px; // Ajustez la position verticale selon vos besoins
+      right: 18px; // Ajustez la position horizontale selon vos besoins
+      color: #000000; // Couleur du texte
+      font-size: 11px;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      background-color: #F6DC2F; // Couleur de fond
+      border-radius: 4px; // Rayon de bordure
+      text-align: center; // Alignement du texte
     }
   }
 
-  &-logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
-    background-color: #fff;
+  .card-footer {
     position: absolute;
-    bottom: 30%;
-    left: 30px;
-    overflow: hidden;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+    bottom: 0px;
+    width: 100%;
+    background-color: #d30c7d;
+    color: white;
+    padding: 8px 0;
+    font-size: 1.25rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    img {
-      height: 100%;
+    .card-fiesta {
+      font-family: Arial, sans-serif; // Change font to Arial
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
     }
-  }
-
-  &-description {
-    position: absolute;
-    color: #fff;
-    font-weight: 900;
-    left: 150px;
-    bottom: 26%;
-  }
-
-  &-btn {
-    position: absolute;
-    color: #fff;
-    right: 30px;
-    bottom: 10%;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-
-    h3 {
-      color: #fff;
-      font-size: 12px
-    }
-  }
-
-  &-date {
-    position: absolute;
-    color: #fff;
-    left: 30px;
-    bottom: 10%;
   }
 }
