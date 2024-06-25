@@ -4,6 +4,9 @@ ruby "3.1.2"
 # Bundle Devise pour authentification utilisateur
 gem "devise"
 
+# Bundle i18n pour gérer la conversion des heures
+gem 'i18n'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 

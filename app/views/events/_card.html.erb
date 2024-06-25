@@ -12,13 +12,14 @@
           <%# </div> %>
           <p><%= event.name %></p>
           <div class="evt-description">
-            <p><%= event.description %></p>
+            <p><%= event.name %></p>
           </div>
           <div class="evt-date">
-            <p><%= event.date_time %></p>
+            <p><i class="fa-solid fa-location-dot"></i> <%= event.location %></p>
+            <p><i class="fa-solid fa-calendar-days"></i> <%= I18n.l(event.date_time, format: :short) %></p>
           </div>
           <div class="evt-btn">
-            <h3 class="card-fiesta"><%= event.open ? 'OUVERT' : 'COMPLET' %></h3>
+            <h3 class="card-fiesta"><%= event.open ? 'Places disponibles' : 'Complet' %></h3>
           </div>
         </div>
       <% end %>
