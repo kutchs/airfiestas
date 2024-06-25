@@ -7,7 +7,7 @@
 
   <div class="form-inputs mt-4">
     <%= form.input :name, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the name of your event' } %>
-    <%= form.input :address, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the address of your event' } %>
+    <%= form.input :location, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the adress of your event' } %>
     <%= form.input :description, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter a description of your event' } %>
     <%= form.input :date_time, input_html: { class: 'field-bg-color field-no-border', value: @event.date_time.try(:strftime, '%Y-%m-%d %H:%M'), placeholder: 'Select date and time' }, wrapper_html: { class: 'mb-3' }, html5: true %>
     <%= form.input :image, as: :file, input_html: { class: 'field-bg-color field-no-border' } %>
@@ -23,11 +23,11 @@
 <script>
   function validateForm() {
     var name = document.getElementById('event_name').value;
-    var address = document.getElementById('event_address').value;
+    var location = document.getElementById('event_location').value;
     var description = document.getElementById('event_description').value;
     var dateTime = document.getElementById('event_date_time').value;
 
-    if (name === '' || address === '' || description === '' || dateTime === '') {
+    if (name === '' || location === '' || description === '' || dateTime === '') {
       document.getElementById('alert-missing-fields').style.display = 'block';
       return false; // Empêche l'envoi du formulaire
     }
