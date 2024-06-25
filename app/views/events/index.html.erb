@@ -4,23 +4,21 @@
   </h1>
 </div>
 
-<div class="index-top-card mt-4 p-4 mb-5" <%= image_tag asset_path('index_image.jpg')%>>
-  <div class="container custom-height">
-    <div class="row justify-content-center align-items-center full-height">
-      <div id="cover">
-        <form method="get" action="">
-          <div class="tb">
-            <div class="td">
-              <input type="text" placeholder="Saisis ta ville ici !" required>
-            </div>
-            <div class="td" id="s-cover">
-              <button type="submit">
-                <div id="s-circle"></div>
-              </button>
-            </div>
+<div class="index-top-card mt-4 p-4 mb-5" style="background-image: url('<%= asset_path('index_image.jpg') %>'); background-size: cover; background-position: center;">
+  <div class="container custom-height d-flex justify-content-center align-items-center">
+    <div id="cover">
+      <form method="get" action="" class="w-100">
+        <div class="tb">
+          <div class="td">
+            <input type="text" class="form-control" placeholder="Rechercher un event dans ma ville" required>
           </div>
-        </form>
-      </div>
+          <div class="td" id="s-cover">
+            <button type="submit" class="btn btn-primary">
+              <div id="s-circle"></div>
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
