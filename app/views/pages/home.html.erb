@@ -1,28 +1,22 @@
 <!-- Banner -->
-
-<div class="banner mt-4 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.civitatis.com/blog/wp-content/uploads/2023/05/festivales-musica-mas-esperados-verano.jpg);">
+<div class="banner mt-4 p-5">
   <div class="container">
-    <div class="row justify-content-center align-items-center";>
+    <div class="row justify-content-center align-items-center">
       <div class="col-10 col-md-6 text-center">
-        <%= image_tag asset_path('AIR FIESTAS font style 250p.png'),style:"height:110px; margin-bottom: 100px" %>
-        <%= link_to 'Je réserve ma soirée de rêve!', events_path, class: 'button nav-link', style:"font-size:25px" %>
-      </div>
+        <h1 class="entete">Préférez des soirées qui vous ressemblent</h1>
+        <h2 class="tagline">Participez ou organisez des soirées pour se rencontrer</h2>
+        </div>
     </div>
   </div>
 </div>
 
- <!-- Fiestas Grid -->
-
+<!-- Fiestas Grid -->
 <div class="container">
-  <h1 class="my-4" style= "font-family:Bebas Neue, sans-serif;font-weight:400;font-style:normal;font-size:80px;">
-  Soirées à la une!</h1>
+  <h1 class="my-4">Soirées à la une!</h1>
   <%= render 'events/card' %>
 </div>
 
-
 <!-- Fiestas Footer in the layout -->
-
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

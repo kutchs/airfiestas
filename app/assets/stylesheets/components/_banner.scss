@@ -1,28 +1,38 @@
-$text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// Variables
+$banner-bg: url('https://res.cloudinary.com/dqbzdz3ob/image/upload/v1719267277/jr-korpa-stwHyPWNtbI-unsplash_zrfaz1.jpg');
+$link-color: rgb(0, 0, 0);
+$link-hover-color: rgb(233, 28, 127);
 
+// Global Styles
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Banner Styles
 .banner {
+  background-image: $banner-bg;
   background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 600px;
+  background-position: ▶️;
+  padding: 4rem 0;
+  color: #fff;
+  text-align: ◀️; // Center align text for better presentation
+  width: 100%; // Make sure the banner takes full width
 
-  h1 {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+  .entete {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-size: 60px;
+    color: rgb(228, 50, 136);
     font-weight: bold;
-  }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px; // Add some spacing below the header
+    line-height: 50px;
   }
 
-  h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
+  .tagline {
+    font-family: Arial, sans-serif;
+    font-style: normal;
     font-size: 18px;
-  }
-  p {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: rgb(236, 222, 232);
+    margin-bottom: 20px; // Add some spacing below the tagline
   }
 }

@@ -14,6 +14,7 @@ User.destroy_all
 Event.destroy_all
 
 user1 = User.create!(email: "hello@hotmail.com", password: "123456", name: "John", firstname: "Doe")
+user2 = User.create!(email: "elodie@kutchs.fr", password: "234567", name: "Elodie", firstname: "Moraud")
 
 event1 = Event.create!(
   {
@@ -22,7 +23,8 @@ event1 = Event.create!(
     location: "123 rue de la faim 75018 Paris",
     date_time: "2024-06-30",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 65.50
   }
 )
 file = URI.open("https://www.talence-athletisme.fr/wp-content/uploads/2022/05/Capture-de%CC%81cran-2022-05-19-a%CC%80-11.30.52-300x196.png")
@@ -37,7 +39,8 @@ event2 = Event.create!(
     location: "5 chemin de banga 33310 Bordeaux",
     date_time: "2024-07-10",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 15
   }
 )
 file = URI.open("https://cdn.sortiraparis.com/images/1004/15516/133763-accronight.png")
@@ -52,7 +55,8 @@ event3 = Event.create!(
     location: "18 cours de la soif 33200 Margaux",
     date_time: "2024-07-24",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 12.45
   }
 )
 file = URI.open("https://static.actu.fr/uploads/2019/03/25EpouseMoiCocotte_%C2%A9SightBySightPhotography_HAPPYPAINT.jpg")
@@ -67,7 +71,8 @@ event4 = Event.create!(
     location: "123 avenue des Chansons, 75001 Paris",
     date_time: "2024-08-15",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 23.50
   }
 )
 file = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2024/04/arenes-lyriques-concert-montmartre-paris-zigzag-1.jpg")
@@ -82,7 +87,8 @@ event5 = Event.create!(
     location: "123 rue des saveurs, 75018 Paris",
     date_time: "2024-08-18",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 6.50
   }
 )
 file = URI.open("https://www.destinationcocktails.fr/wp-content/uploads/2021/04/theme-soiree-creole-min.jpeg")
@@ -99,7 +105,9 @@ event6 = Event.create!(
     location: "Tour Eiffel, 75007 Paris",
     date_time: "2024-08-22",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 2
+
   }
 )
 file = URI.open("https://img-4.linternaute.com/e9-DdluJQ9o1pfbPPdXl_z3TkWg=/1500x/smart/cd8e4675a2c94d089ca136f2b5448123/ccmcms-linternaute/60299137.png")
@@ -114,7 +122,8 @@ event7 = Event.create!(
     location: "Rue du reveil pas matinal, 69000 Lyon",
     date_time: "2024-08-24",
     open: true,
-    user_id: user1.id
+    user_id: user1.id,
+    price: 4
   }
 )
 file = URI.open("https://cloudfront-eu-central-1.images.arcpublishing.com/leparisien/RB3QW5OBYRADHFY5FSC25I3T24.jpg")
@@ -129,7 +138,8 @@ event8 = Event.create!(
     location: "Rue de la troupe, 74000 Annecy",
     date_time: "2024-08-12",
     open: true,
-    user_id: user1.id
+    user_id: user2.id,
+    price: 3
   }
 )
 file = URI.open("https://www.nimesurbantrail.com/wp-content/uploads/2022/06/De%CC%81guisement-1-vainqueur.png")
@@ -144,7 +154,8 @@ event9 = Event.create!(
     location: "Impasse de la rupture, 69000 Lyon",
     date_time: "2024-08-01",
     open: true,
-    user_id: user1.id
+    user_id: user2.id,
+    price: 10
   }
 )
 file = URI.open("https://www.benmazue.com/wp-content/uploads/2023/12/kitch-4-1.jpg")

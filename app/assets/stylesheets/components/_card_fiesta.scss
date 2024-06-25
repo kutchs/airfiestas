@@ -3,12 +3,21 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  box-shadow: 0 4px 8px #d5d2d4;
   transition: all 0.3s ease;
   height: 430px;
 
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px #ede8eb;
+  }
+  &:active {
+    box-shadow: 0 8px 16px #e6e3e5;
   }
 
   .evt-profile-img {
@@ -20,8 +29,6 @@
 
   .card-body {
     background-color: #f8f9fa;
-
-
 
     .card-title {
       color: #000000;
@@ -36,13 +43,13 @@
       position: absolute;
       color: #000000;
       bottom: 80px;
-      width: 100%;
-      text-align: ◀️;
-      color: #131313;
+      width: 88%; /* Ajustez ce pourcentage selon vos besoins */
+      margin: 0 auto; /* Centre le texte horizontalement */
+      text-align: left;
       font-size: 10px;
       font-family: 'Arial', sans-serif;
-      padding: 8px 0;
-      margin: 4px 0;
+      left: 0;
+      right: 0;
     }
 
     .card-location {
@@ -53,21 +60,19 @@
       color: #131313;
       font-size: 10px;
       font-family: 'Arial', sans-serif;
-      padding: 8px 0;
-      border-top: 1px solid #ddd;
     }
 
     .evt-date {
       position: absolute;
       width: 90px; // Largeur fixe du fond de la date
-      height: 20px; // Hauteur fixe du fond de la date
+      height: 18px; // Hauteur fixe du fond de la date
       top: 20px; // Ajustez la position verticale selon vos besoins
       right: 18px; // Ajustez la position horizontale selon vos besoins
-      color: #000000; // Couleur du texte
+      color: rgb(249, 21, 131); // Couleur du texte
       font-size: 11px;
       font-family: 'Arial', sans-serif;
       font-weight: bold;
-      background-color: #F6DC2F; // Couleur de fond
+      background-color: #ffffff; // Couleur de fond
       border-radius: 4px; // Rayon de bordure
       text-align: center; // Alignement du texte
     }
@@ -77,7 +82,7 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
-    background-color: #d30c7d;
+    background-color: rgb(233, 28, 127);
     color: white;
     padding: 8px 0;
     font-size: 1.25rem;

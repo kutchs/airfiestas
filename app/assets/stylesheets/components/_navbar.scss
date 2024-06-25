@@ -18,13 +18,20 @@
   font-size: 16px;
   font-weight: bold;
   text-decoration: none; /* Supprime le soulignement par défaut des liens */
-  color: #000; /* Couleur de texte par défaut */
+  color: #d30c7d;; /* Couleur de texte par défaut */
   transition: color 0.3s ease; /* Animation de transition pour la couleur */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens lors du survol, du focus et de l'activation */
+  }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: #f415da; /* Couleur rose pour le survol, le focus et l'activation */
-    text-decoration: none; /* Supprime le soulignement par défaut des liens lors du survol, du focus et de l'activation */
+a.nav-link{
+  color: #d30c7d;
+  :hover {
+    color: #d30c7d;
+  }
+  :active {
+    color: #d30c7d;
+  }
+  :focus {
+    color: #d30c7d;
   }
 }
