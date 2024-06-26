@@ -22,7 +22,7 @@
             <p class="button">Déjà réservé!</p>
           <% else %>
             <%= form_with(url: register_event_path(@event), method: :post) do |form| %>
-              <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 20px;' %>
+              <%= form.submit "Réserver ma place", class: "button", style: 'border-radius:5px; margin-top: 15px;' %>
             <% end %>
           <% end %>
         </div>
