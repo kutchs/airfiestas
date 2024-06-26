@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6 mb-4">
-      <h1 class="h1-line">S'inscrire</h1>
+      <div class="mt-4 mb-3">
+      <h1 style="font-family:Bebas Neue, sans-serif; font-weight: 400; font-style: normal; font-size: 80px;">S'inscrire</h1>
+      </div>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
@@ -33,7 +35,7 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "S'inscrire" %>
+            <%= f.button :submit, "S'inscrire", class: "btn btn-primary mt-2 mb-4" %>
           </div>
         <% end %>
 
