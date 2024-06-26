@@ -4,6 +4,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    if params[:query].present?
+      @events = @events.where("location ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
