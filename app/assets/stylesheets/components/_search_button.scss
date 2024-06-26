@@ -46,7 +46,7 @@ button {
       font-size: 20px;
       padding: 0 10px;
       background-color: #fff;
-      color: $background-grey-color;
+      color: #333;  // Utilisation d'une couleur directe pour éviter une variable non définie
       border: none;
       border-radius: 20px 0 0 20px;
 
