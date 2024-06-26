@@ -6,18 +6,19 @@
   </div>
 
   <div class="form-inputs mt-4">
-    <%= form.input :name, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the name of your event' } %>
-    <%= form.input :location, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter the adress of your event' } %>
-    <%= form.input :description, input_html: { class: 'field-bg-color field-no-border', placeholder: 'Enter a description of your event' } %>
-    <%= form.input :date_time, input_html: { class: 'field-bg-color field-no-border', value: @event.date_time.try(:strftime, '%Y-%m-%d %H:%M'), placeholder: 'Select date and time' }, wrapper_html: { class: 'mb-3' }, html5: true %>
+    <%= form.input :name, label: "Nom", input_html: { class: 'field-bg-color field-no-border', placeholder: "nom de l'évènement" } %>
+    <%= form.input :location, label: "Adresse", input_html: { class: 'field-bg-color field-no-border', placeholder: "Adresse de l'évènement" } %>
+    <%= form.input :description, input_html: { class: 'field-bg-color field-no-border', placeholder: "Description de l'évènement" } %>
+    <%= form.input :date_time, label: "Date & heure", input_html: { class: 'field-bg-color field-no-border', value: @event.date_time.try(:strftime, '%Y-%m-%d %H:%M'), placeholder: "Date et heure de l'évènement" }, wrapper_html: { class: 'mb-3' }, html5: true %>
     <%= form.input :image, as: :file, input_html: { class: 'field-bg-color field-no-border' } %>
     <%= form.hidden_field :open, value: true %>
   </div>
 
   <div class="form-actions text-end">
-    <%= link_to 'Back', events_path, class: 'btn btn-secondary' %>
-    <%= form.button :submit, 'Add event', class: 'btn btn-primary', onclick: 'return validateForm();' %>
+    <%= link_to 'Retour', events_path, class: 'btn btn-secondary' %>
+    <%= form.button :submit, "Créer l'évènement", class: 'btn btn-primary', onclick: 'return validateForm();' %>
   </div>
+  <p>Les champs marqués d'un <b>*</b> sont obligatoires</p>
 <% end %>
 
 <script>
