@@ -1,3 +1,6 @@
+$background-color: #ff7575;
+$image-path: url('https://icones.pro/wp-content/uploads/2021/06/symbole-de-la-loupe-rose.png');
+
 * {
   outline: none;
 }
@@ -46,7 +49,7 @@ button {
       font-size: 20px;
       padding: 0 10px;
       background-color: #fff;
-      color: #333;  // Utilisation d'une couleur directe pour éviter une variable non définie
+      color: #333;
       border: none;
       border-radius: 20px 0 0 20px;
 
@@ -87,4 +90,5 @@ button {
       }
     }
   }
-}
+
+  }

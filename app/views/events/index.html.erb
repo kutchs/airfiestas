@@ -8,14 +8,16 @@
   <div class="container custom-height d-flex justify-content-center align-items-center">
     <div id="cover">
       <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Chercher par ville"
-        %>
-        <div class="td" id="s-cover">
-        <%= submit_tag "Recherche", name: "", id: "s-circle", class: "btn" %>
-        </div>
+
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Chercher par ville"
+          %>
+          <div class="td" id="s-cover">
+          <%= submit_tag "Go!", name: "", id: "s-circle", class: "btn gradient-text" %>
+          </div>
+
       <% end %>
     </div>
   </div>
